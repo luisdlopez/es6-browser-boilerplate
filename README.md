@@ -1,5 +1,6 @@
 # es6-browser-starter-kit
-Starter kit for developing browser scripts with ES6, **with heavy emphasis in testing**.
+Starter kit for developing browser scripts with ES6, **with heavy emphasis on testing**.
+
 Run `npm install` and start coding in ES6 right away.
 
 ### Bundling
