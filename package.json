@@ -18,27 +18,32 @@
     "url": "https://github.com/luisdlopez/es6-browser-starter-kit"
   },
   "scripts": {
-    "test": "karma start",
-    "build": "browserify --standalone dist src/index.js -t babelify -o dist/dist.js",
-    "watch": "watchify --standalone dist src/index.js -t babelify -o dist/dist.js"
+    "preinstall": "npm set progress=false",
+    "test": "NODE_ENV=test karma start",
+    "test-coverage": "NODE_ENV=test karma start --coverage",
+    "build": "browserify src/index.js -t babelify -o dist/dist.js",
+    "build-watch": "watchify src/index.js -t babelify -o dist/dist.js"
   },
   "licence": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "browserify": "^13.0.0",
+    "browserify-istanbul": "^0.2.1",
     "chai": "^3.4.1",
+    "isparta": "^4.0.0",
     "karma": "^0.13.19",
     "karma-browserify": "^4.4.2",
     "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^0.2.2",
+    "karma-coverage": "^0.5.3",
     "karma-mocha": "^0.2.1",
     "karma-mocha-reporter": "^1.1.5",
     "karma-sinon": "^1.0.4",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
-    "uglifyify": "^3.0.1",
     "watchify": "^3.7.0"
   }
 }
