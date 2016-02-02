@@ -21,8 +21,8 @@
     "preinstall": "npm set progress=false",
     "test": "NODE_ENV=test karma start",
     "test-coverage": "NODE_ENV=test karma start --coverage",
-    "build": "browserify src/index.js -t babelify -o dist/dist.js",
-    "build-watch": "watchify src/index.js -t babelify -o dist/dist.js"
+    "build": "browserify -t babelify src/index.js | uglifyjs -cm > dist/dist.js",
+    "build-watch": "watchify -t babelify src/index.js | uglifyjs -cm > dist/dist.js"
   },
   "licence": "MIT",
   "dependencies": {},
@@ -44,6 +44,7 @@
     "karma-sinon": "^1.0.4",
     "mocha": "^2.3.4",
     "sinon": "^1.17.2",
+    "uglify-js": "^2.6.1",
     "watchify": "^3.7.0"
   }
 }
