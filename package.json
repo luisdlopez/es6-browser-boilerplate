@@ -22,7 +22,7 @@
     "test": "NODE_ENV=test karma start",
     "test-coverage": "NODE_ENV=test karma start --coverage",
     "build": "browserify -t babelify src/index.js | uglifyjs -cm > dist/dist.js",
-    "build-watch": "watchify -t babelify src/index.js | uglifyjs -cm > dist/dist.js"
+    "watch": "watchify -t babelify src/index.js -o 'uglifyjs -cm > dist/dist.js'"
   },
   "licence": "MIT",
   "dependencies": {},
